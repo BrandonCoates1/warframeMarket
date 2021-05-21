@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+
+body {
+    background-color: rgb(224, 224, 224);
+    font-family: "koHo";
+    padding-left: 8.5vw;
+    padding-right: 8.5vw;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+}
+
+.searchBar {
+    display: flex;
+    height: 80vh;
+    /* width: 83vw; */
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://pbs.twimg.com/media/E1sHDEgXEAcX1bQ?format=jpg&name=medium);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bar {
+    height: 4vh;
+    width: 20vw;
+    font-size: 1em;
+}
+
+.barButton {
+    height: 4.5vh;
+}
+
+.navbar {
+    position: fixed;
+    width: fit-content;
+    top: 25vh;
+    left: 0;
+    background-color: rgb(163, 163, 163);
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbarButton {
+    background-color: transparent;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: auto; 
+    height: 128px;
+    width: 128;
+    color: transparent;
+    border: solid 0px #000000;
+}
+
+.navbarButton:hover {
+    cursor: pointer;
+}
+
+.mainHeader {
+    font-size: 2.5em;
+}
+
+.item {
+    display: grid;
+    grid-template-areas: 
+    "name name name"
+    "img desc ducats"
+    "img relics .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 20vh 47vh;
+    column-gap: 5vw;
+}
+
+.itemName {
+    color: rgb(25, 0, 255);
+    grid-area: name;
+    place-self: center;
+    font-size: 2em;
+}
+
+.warframeParts {
+    display: flex;
+    flex-direction: column;
+    grid-area: img;
+}
+
+.warframeParts img {
+    align-self: center;
+    object-fit: none;
+}
+
+.line {
+    display: flex;
+    position: relative;
+    height: 2vh;
+    width: 18vw;
+    bottom: 0.5vh;
+    background-color: rgb(163, 163, 163);
+    color: white;
+    border-radius: 16px;
+    justify-content: center;
+    align-self: center;
+}
+
+.itemDesc {
+    grid-area: desc;
+    align-self: center;
+}
+
+.ducats {
+    display: flex;
+    grid-area: ducats;
+    align-items: center;
+}
+
+.item ul {
+    grid-area: relics;
+}

@@ -1,0 +1,23 @@
+<div class="item">
+	{{#if listExists}}
+		{{#each data.payload.item.items_in_set}}
+			<h2 class="itemName">{{this.url_name}}</h2>
+			<div class="warframeParts">
+				<img src="http://warframe.market/static/assets/{{this.icon}}" alt="image of item">
+				<div class="line">v</div>
+				<img src="http://warframe.market/static/assets/{{this.sub_icon}}" alt="">
+			</div>
+			<p class="itemDesc">{{this.desc}}</p>
+			<div class="ducats">
+				<img src="https://warframe.market/static/build/resources/images/icons/Ducats.67a4b4c615df1dff8bd5b091daea79ec.png" alt="image of ducats">
+				<p>{{this.ducats}} ducats</p>
+			</div>
+			<ul>
+				<h3>Relics</h3>
+				{{#each this.en.drop}}
+					<li>{{this.name}}</li>
+				{{/each}}
+			</ul>
+		{{/each}}
+	{{/if}}
+</div>

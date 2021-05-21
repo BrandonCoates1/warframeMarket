@@ -1,0 +1,13 @@
+<div class="navbar">
+    {{#if listExists}}
+        <ul>
+            {{#each allItems.payload.item.items_in_set}}
+                <li>
+                    <form action="/item" method="GET">
+                        <input class="navbarButton" type="submit" style="background-image: url(http://warframe.market/static/assets/{{this.sub_icon}});" value={{this.url_name}} name="search">
+                    </form>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</div>
